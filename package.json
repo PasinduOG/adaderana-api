@@ -1,14 +1,14 @@
 {
-  "name": "adaderana-api",
+  "name": "adaderana-scraper",
   "version": "1.0.0",
   "description": "A lightweight API and scraper for Ada Derana Sinhala news content. This package allows you to easily access hot news headlines, summaries, and links from the Ada Derana Sinhala news website.",
-  "homepage": "https://github.com/PasinduOG/adaderana-api#readme",
+  "homepage": "https://github.com/PasinduOG/adaderana-scraper#readme",
   "bugs": {
-    "url": "https://github.com/PasinduOG/adaderana-api/issues"
+    "url": "https://github.com/PasinduOG/adaderana-scraper/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PasinduOG/adaderana-api.git"
+    "url": "git+https://github.com/PasinduOG/adaderana-scraper.git"
   },
   "license": "MIT",
   "author": "Pasindu Madhuwantha (PasinduOG)",

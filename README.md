@@ -1,11 +1,11 @@
-# 📰 Ada Derana API
+# 📰 Ada Derana Scraper
 
 A lightweight API and scraper for Ada Derana Sinhala news content. This package allows you to easily access hot news headlines, summaries, and links from the Ada Derana Sinhala news website.
 
 ## 🚀 Installation
 
 ```bash
-npm install adaderana-api
+npm install adaderana-scraper
 ```
 
 ## ✨ Features
@@ -26,7 +26,7 @@ const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
 const helmet = require('helmet');
-const { createAdaDeranaAPI, scrapeHotNews } = require('adaderana-api');
+const { createAdaDeranaAPI, scrapeHotNews } = require('adaderana-scraper');
 
 // Create the base app
 const app = express();
@@ -86,7 +86,7 @@ app.listen(PORT, () => {
 ### 🛠️ As an Express API
 
 ```javascript
-const { createAdaDeranaAPI } = require('adaderana-api');
+const { createAdaDeranaAPI } = require('adaderana-scraper');
 const app = createAdaDeranaAPI();
 
 // Optional: Add more routes or middleware here
@@ -100,7 +100,7 @@ app.listen(PORT, () => {
 ### 🧰 As a Scraper
 
 ```javascript
-const { scrapeHotNews } = require('adaderana-api');
+const { scrapeHotNews } = require('adaderana-scraper');
 
 async function getNews() {
   try {
