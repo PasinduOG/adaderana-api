@@ -1,4 +1,4 @@
-# 📰 Ada Derana Scraper (v1.1.0)
+# 📰 Ada Derana Scraper (v1.1.1)
 
 A lightweight API and scraper for Ada Derana Sinhala news content. This package allows you to easily access hot news headlines, summaries, and links from the Ada Derana Sinhala news website.
 
@@ -23,12 +23,13 @@ You can create a simple server to run the API:
 ```javascript
 // server.js
 const express = require('express');
-const { createAdaDeranaAPI } = require('./index');
+const adaDerana = require('adaderana-scraper');
+require('dotenv').config(); // Load environment variables from .env file
 
-const app = createAdaDeranaAPI();
-const PORT = process.env.PORT || 3000;
+const server = adaDerana.createAdaDeranaAPI();
+const PORT = process.env.PORT;
 
-app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
 });
 ```
@@ -37,11 +38,13 @@ app.listen(PORT, () => {
 
 ```javascript
 const { createAdaDeranaAPI } = require('adaderana-scraper');
+require('dotenv').config(); // Load environment variables
+
 const app = createAdaDeranaAPI();
 
 // Optional: Add more routes or middleware here
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT;
 app.listen(PORT, () => {
   console.log(`Ada Derana API server running on port ${PORT}`);
 });
@@ -62,6 +65,43 @@ async function getNews() {
 }
 
 getNews();
+```
+
+## 🔧 Environment Configuration
+
+You can configure the application using environment variables:
+
+### Available Environment Variables:
+- `PORT`: The port number for the server (default: `3000`)
+
+### Setting Environment Variables:
+
+#### Using .env file (recommended for development):
+Create a `.env` file in your project root:
+
+```
+PORT=8080
+```
+
+Then install the dotenv package:
+
+```bash
+npm install dotenv
+```
+
+And import it in your server file as shown in the usage examples above.
+
+#### Using command line (for production):
+
+```bash
+# Linux/Mac
+PORT=8080 node server.js
+
+# Windows Command Prompt
+set PORT=8080 && node server.js
+
+# Windows PowerShell
+$env:PORT=8080; node server.js
 ```
 
 ## 📚 API Documentation
