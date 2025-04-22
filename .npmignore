@@ -1,0 +1,43 @@
+# Development files
+node_modules/
+.vscode/
+.idea/
+.git/
+.github/
+.gitignore
+.npmrc
+.eslintrc*
+.prettierrc*
+.babelrc*
+
+# Test directories and files
+test/
+tests/
+__tests__/
+coverage/
+
+# Documentation
+docs/
+*.md
+!README.md
+
+# Configuration files
+*.config.js
+*.setup.js
+tsconfig.json
+
+# Build and source control
+.DS_Store
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.travis.yml
+.circleci/
+
+# Examples and demos
+examples/
+demo/
+
+# Source maps
+*.map
